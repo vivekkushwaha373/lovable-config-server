@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+app:
+  security:
+    public-routes:
+      - "/api/v1/account/auth/login"
+      - "/api/v1/account/auth/signup"
+      - "/api/v1/account/webhooks/**"
+      - "/api/v1/workspace/public/**"
+
+spring:
+  cloud:
+    gateway.server.webflux:
+      routes:
+        # Account Service (context-path: /account)
+        - id: account-service
+          uri: lb://account-service
+          predicates:
+            - Path=/api/v1/account/**
+          filters:
+            - StripPrefix=2
