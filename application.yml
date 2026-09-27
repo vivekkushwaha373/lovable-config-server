@@ -1,1 +1,25 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      format_sql: false
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+    
+jwt.secretKey: 5j3K3YJcWFr2PsMvjO74iMWTJ8UWCTBAro54bR4/Y4o=
+  
+app:
+  frontend:
+    url: http://localhost:8080/frontend
