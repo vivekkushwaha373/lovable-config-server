@@ -18,5 +18,6 @@ spring:
       chat:
         options:
           # model: nvidia/nemotron-3-ultra-550b-a55b:free
-          model: respan/span-01-lite:free
+          # model: respan/span-01-lite:free
+          model: deepseek/deepseek-v4.1-flash
           temperature: 0.0
