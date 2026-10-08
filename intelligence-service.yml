@@ -17,7 +17,8 @@ spring:
       base-url: https://openrouter.ai/api/v1
       chat:
         options:
-          model: nvidia/nemotron-3-ultra-550b-a55b:free
+          model: openrouter/free
+          # model: nvidia/nemotron-3-ultra-550b-a55b:free
           # model: respan/span-01-lite:free
           # model: deepseek/deepseek-v4.1-flash
           temperature: 0.0
